@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
 import Cursor from './components/Cursor'
+import ParticlesBackground from './components/ParticlesBackground'
 
 import Home from './pages/Home'
 import Games from './pages/Games'
@@ -18,36 +19,57 @@ function App() {
   useEffect(() => {
 
     setTimeout(() => {
+
       setLoading(false)
+
     }, 2200)
 
   }, [])
 
   if (loading) {
+
     return <Loader />
+
   }
 
   return (
+
     <>
-    <Cursor />
+
+      <ParticlesBackground />
+
+      <Cursor />
 
       <Navbar />
 
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-        <Route path="/games" element={<Games />} />
+        <Route
+          path="/games"
+          element={<Games />}
+        />
 
-        <Route path="/shop" element={<Shop />} />
+        <Route
+          path="/shop"
+          element={<Shop />}
+        />
 
-        <Route path="/videos" element={<Videos />} />
+        <Route
+          path="/videos"
+          element={<Videos />}
+        />
 
       </Routes>
 
       <Footer />
 
     </>
+
   )
 }
 

@@ -10,7 +10,7 @@ function Navbar() {
     <motion.nav
       className="navbar"
 
-      initial={{ y: -80 }}
+      initial={{ y: -100 }}
 
       animate={{ y: 0 }}
 
@@ -18,20 +18,16 @@ function Navbar() {
     >
 
       <div className="logo">
-
         🎮 Ruben's Gaming Garage
-
       </div>
 
-      <ul className="nav-links">
+      <div className="nav-right">
 
-        <li>
-          <Link to="/">
-            Home
-          </Link>
-        </li>
+        <Link to="/">
+          Home
+        </Link>
 
-        <li className="dropdown">
+        <div className="dropdown">
 
           <span>
             Gaming ▾
@@ -49,15 +45,13 @@ function Navbar() {
 
           </div>
 
-        </li>
+        </div>
 
-        <li>
-          <Link to="/shop">
-            Gear
-          </Link>
-        </li>
+        <Link to="/shop">
+          Gear
+        </Link>
 
-      </ul>
+      </div>
 
     </motion.nav>
   )
