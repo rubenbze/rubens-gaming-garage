@@ -1,8 +1,5 @@
 .navbar {
 
-  transition: 0.3s;
-}
-
 .nav-right a:hover::after,
 .dropdown span:hover::after {
   width: 100%;
