@@ -1,4 +1,4 @@
-import Particles from "react-tsparticles"
+import Particles from 'react-tsparticles'
 
 function ParticlesBackground() {
 
@@ -6,11 +6,21 @@ function ParticlesBackground() {
 
     <Particles
 
+      id="tsparticles"
+
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: -10,
+      }}
+
       options={{
+
+        fullScreen: false,
 
         background: {
           color: {
-            value: "#020617",
+            value: '#020617',
           },
         },
 
@@ -19,33 +29,28 @@ function ParticlesBackground() {
         particles: {
 
           color: {
-            value: "#60a5fa",
+            value: '#60a5fa',
           },
 
           links: {
-            color: "#60a5fa",
-
-            distance: 140,
-
+            color: '#60a5fa',
+            distance: 150,
             enable: true,
-
             opacity: 0.2,
-
             width: 1,
           },
 
           move: {
             enable: true,
-
-            speed: 1.2,
+            speed: 1.3,
           },
 
           number: {
-            value: 65,
+            value: 70,
           },
 
           opacity: {
-            value: 0.35,
+            value: 0.3,
           },
 
           size: {

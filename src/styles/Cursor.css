@@ -1,8 +1,13 @@
+body {
+  cursor: none;
+}
+
 .custom-cursor {
+
   position: fixed;
 
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
 
   border:
     2px solid rgba(96,165,250,0.9);
@@ -18,15 +23,16 @@
   backdrop-filter: blur(4px);
 
   box-shadow:
-    0 0 28px rgba(59,130,246,0.7);
+    0 0 30px rgba(59,130,246,0.8);
 
   transition:
+    transform 0.06s ease,
     width 0.2s,
-    height 0.2s,
-    transform 0.08s;
+    height 0.2s;
 }
 
 .custom-cursor::after {
+
   content: "";
 
   position: absolute;
