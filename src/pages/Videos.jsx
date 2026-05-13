@@ -20,7 +20,7 @@ function Videos() {
   link:
     "https://www.youtube.com/embed/QdBZY2fkU-0"
     }
-  ]
+  ] 
 
   return (
     <div className="videos-page">
