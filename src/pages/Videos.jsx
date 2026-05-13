@@ -4,9 +4,9 @@ function Videos() {
 
   const videos = [
     {
-      title: "Insane Gaming Setup Tour",
+      title: "One Piece Egghead Arc Trailer",
   link:
-    "https://www.youtube.com/embed/3VZFpwlXKpg"
+    "https://www.youtube.com/embed/V4KQW7r1qpg"
     },
 
     {
