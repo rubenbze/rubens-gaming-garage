@@ -1,4 +1,4 @@
-import './TwitchEmbed.css'
+import '../styles/TwitchEmbed.css'
 
 function TwitchEmbed() {
   return (

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
+import Cursor from './components/Cursor'
 
 import Home from './pages/Home'
 import Games from './pages/Games'
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+    <Cursor />
 
       <Navbar />
 

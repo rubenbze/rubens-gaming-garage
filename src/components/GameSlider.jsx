@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
-import './GameSlider.css'
+import '../styles/GameSlider.css'
 
 const games = [
   {

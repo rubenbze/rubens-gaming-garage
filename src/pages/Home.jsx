@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import GameSlider from '../components/GameSlider'
+import TwitchEmbed from '../components/TwitchEmbed'
 
 function Home() {
   return (
@@ -53,6 +54,8 @@ function Home() {
       </section>
 
       <GameSlider />
+
+      <TwitchEmbed />
 
     </div>
   )
