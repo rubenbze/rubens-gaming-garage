@@ -2,6 +2,8 @@ import '../styles/Home.css'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
+import GameSlider from '../components/GameSlider'
+
 function Home() {
   return (
     <div className="home">
@@ -49,6 +51,8 @@ function Home() {
         </motion.div>
 
       </section>
+
+      <GameSlider />
 
     </div>
   )
