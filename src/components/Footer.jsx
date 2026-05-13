@@ -18,12 +18,12 @@ function Footer() {
       <div className="footer-links">
 
         <a
-          href="https://instagram.com/rubenbze"
+          href="https://instagram.com/itzrubenbze"
           target="_blank"
         >
           <FaInstagram />
 
-          @rubenbze
+          @itzrubenbze
         </a>
 
         <a href="tel:6261182">

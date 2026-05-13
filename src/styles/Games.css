@@ -1,131 +1,86 @@
 .games-page {
-  min-height: 100vh;
-
-  background: #020617;
-
-  color: white;
-
-  padding: 80px 40px;
+  padding: 140px 40px;
 }
 
 .games-page h1 {
   text-align: center;
 
-  font-size: 54px;
+  font-size: 64px;
 
   margin-bottom: 60px;
+
+  text-shadow:
+    0 0 25px rgba(59,130,246,0.65);
 }
 
 .games-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
-  gap: 40px;
+  gap: 35px;
 }
 
 .game-card {
-  position: relative;
+  text-decoration: none;
+}
+
+.game-image {
+  height: 420px;
+
+  border-radius: 28px;
+
+  background-size: cover;
+  background-position: center;
 
   overflow: hidden;
 
-  border-radius: 20px;
-
-  height: 500px;
-
-  cursor: pointer;
+  position: relative;
 
   transition: 0.4s;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
 }
 
-.game-card img {
-  width: 100%;
+.game-image:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02);
 
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: 0.5s;
+  box-shadow:
+    0 0 45px rgba(59,130,246,0.45);
 }
 
 .game-overlay {
   position: absolute;
 
-  bottom: 0;
+  inset: 0;
 
-  width: 100%;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.88)
+    );
 
-  padding: 30px;
+  display: flex;
 
-  background: linear-gradient(
-    transparent,
-    rgba(0,0,0,0.95)
-  );
+  flex-direction: column;
 
-  transform: translateY(120px);
+  justify-content: flex-end;
 
-  transition: 0.4s;
-}
-
-.game-card:hover .game-overlay {
-  transform: translateY(0);
-}
-
-.game-card:hover img {
-  transform: scale(1.08);
-}
-
-.game-card:hover {
-  box-shadow: 0 0 30px #2563eb;
+  padding: 28px;
 }
 
 .game-overlay h2 {
-  margin-bottom: 15px;
+  font-size: 34px;
 
-  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .game-overlay p {
-  margin-bottom: 20px;
+  color: #93c5fd;
 
-  color: #d1d5db;
-}
-
-.game-overlay button {
-  padding: 12px 20px;
-
-  border: none;
-
-  border-radius: 8px;
-
-  background: #2563eb;
-
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.game-overlay button:hover {
-  background: #1d4ed8;
-}
-@media (max-width: 768px) {
-
-  .games-page {
-    padding: 120px 20px;
-  }
-
-  .games-page h1 {
-    font-size: 38px;
-  }
-
-  .game-card {
-    height: 400px;
-  }
-
-  .game-overlay h2 {
-    font-size: 24px;
-  }
-
+  font-size: 18px;
 }
