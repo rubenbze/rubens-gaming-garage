@@ -2,17 +2,23 @@
 
   min-height: 100vh;
 
+  width: 100%;
+
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  padding: 140px 20px 80px;
+  text-align: center;
+
+  padding: 120px 5vw;
 
   position: relative;
 
   overflow: hidden;
 }
+
+/* BACKGROUND IMAGE */
 
 .hero::before {
 
@@ -23,9 +29,10 @@
   inset: 0;
 
   background:
+
     linear-gradient(
-      rgba(2,6,23,0.78),
-      rgba(2,6,23,0.88)
+      rgba(2,6,23,0.65),
+      rgba(2,6,23,0.82)
     ),
 
     url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop");
@@ -34,8 +41,12 @@
 
   background-position: center;
 
-  z-index: -2;
+  transform: scale(1.08);
+
+  z-index: -3;
 }
+
+/* BLUE GLOW */
 
 .hero::after {
 
@@ -43,73 +54,77 @@
 
   position: absolute;
 
-  width: 700px;
-  height: 700px;
+  width: 900px;
+  height: 900px;
 
   background:
     radial-gradient(
       circle,
-      rgba(59,130,246,0.22),
+      rgba(59,130,246,0.28),
       transparent 70%
     );
 
-  filter: blur(90px);
+  filter: blur(100px);
 
-  z-index: -1;
+  z-index: -2;
 }
 
 .hero-content {
 
-  max-width: 900px;
-
-  text-align: center;
+  max-width: 1200px;
 }
 
 .hero-content h1 {
 
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(4rem, 9vw, 8rem);
 
-  font-weight: 800;
+  font-weight: 900;
 
-  line-height: 1.05;
+  line-height: 0.95;
 
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+
+  letter-spacing: -3px;
 
   text-shadow:
-    0 0 30px rgba(59,130,246,0.6);
+    0 0 35px rgba(59,130,246,0.7);
 }
 
 .hero-content p {
 
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
 
   line-height: 1.8;
 
   color: #cbd5e1;
-
-  max-width: 760px;
-
-  margin: auto;
 }
 
 .hero-buttons {
 
-  margin-top: 42px;
+  margin-top: 50px;
 
   display: flex;
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 24px;
 
   flex-wrap: wrap;
 }
 
 .hero-buttons a {
 
-  padding: 16px 34px;
+  padding: 18px 42px;
 
   border-radius: 18px;
+
+  font-size: 18px;
+
+  font-weight: 700;
 
   background:
     linear-gradient(
@@ -120,29 +135,34 @@
 
   color: white;
 
-  font-weight: 700;
-
-  transition: 0.3s;
+  transition: 0.35s;
 
   box-shadow:
-    0 0 30px rgba(59,130,246,0.35);
+    0 0 35px rgba(59,130,246,0.35);
 }
 
 .hero-buttons a:hover {
 
   transform:
-    translateY(-4px)
-    scale(1.03);
+    translateY(-6px)
+    scale(1.04);
 
   box-shadow:
-    0 0 45px rgba(59,130,246,0.65);
+    0 0 55px rgba(59,130,246,0.7);
 }
 
 @media (max-width: 768px) {
 
   .hero {
 
-    padding-top: 180px;
+    padding-top: 170px;
+  }
+
+  .hero-content h1 {
+
+    font-size: 4rem;
+
+    line-height: 1;
   }
 
   .hero-buttons {
