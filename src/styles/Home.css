@@ -1,26 +1,25 @@
 .hero {
 
+  position: relative;
+
   width: 100%;
 
-  min-height: auto;
-
-  position: relative;
+  min-height: 100vh;
 
   display: flex;
 
-  align-items: flex-start;
-
   justify-content: center;
+
+  align-items: center;
 
   text-align: center;
 
-  padding:
-    90px 6vw 40px;
-
   overflow: hidden;
+
+  padding: 0 6vw;
 }
 
-/* BACKGROUND IMAGE */
+/* BACKGROUND */
 
 .hero::before {
 
@@ -33,11 +32,11 @@
   background:
 
     linear-gradient(
-      rgba(2,6,23,0.45),
-      rgba(2,6,23,0.78)
+      rgba(2,6,23,0.55),
+      rgba(2,6,23,0.80)
     ),
 
-    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop");
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop");
 
   background-size: cover;
 
@@ -46,7 +45,7 @@
   z-index: -3;
 }
 
-/* RGB GLOW */
+/* RGB LIGHTING */
 
 .hero::after {
 
@@ -54,10 +53,8 @@
 
   position: absolute;
 
-  width: 900px;
-  height: 900px;
-
-  top: -250px;
+  width: 1000px;
+  height: 1000px;
 
   background:
     radial-gradient(
@@ -73,37 +70,38 @@
 
 .hero-content {
 
-  width: 100%;
+  max-width: 1100px;
 
-  max-width: 1200px;
-
+  z-index: 5;
 }
 
 .hero-content h1 {
+
+  font-family: 'Orbitron', sans-serif;
 
   font-size: clamp(4rem, 9vw, 8rem);
 
   font-weight: 900;
 
-  line-height: 0.92;
+  line-height: 0.9;
 
   letter-spacing: -4px;
 
   margin-bottom: 30px;
 
   text-shadow:
-    0 0 40px rgba(168,85,247,0.8);
+    0 0 40px rgba(168,85,247,0.85);
 }
 
 .hero-content p {
 
-  max-width: 900px;
-
-  margin: auto;
-
   font-size: clamp(1.1rem, 2vw, 1.5rem);
 
   line-height: 1.8;
+
+  max-width: 850px;
+
+  margin: auto;
 
   color: #e2e8f0;
 }
@@ -143,17 +141,17 @@
   transition: 0.35s;
 
   box-shadow:
-    0 0 35px rgba(124,58,237,0.45);
+    0 0 40px rgba(124,58,237,0.45);
 }
 
 .hero-buttons a:hover {
 
   transform:
-    translateY(-5px)
-    scale(1.04);
+    translateY(-6px)
+    scale(1.05);
 
   box-shadow:
-    0 0 60px rgba(124,58,237,0.8);
+    0 0 70px rgba(124,58,237,0.85);
 }
 
 @media (max-width: 768px) {
@@ -161,19 +159,12 @@
   .hero {
 
     padding:
-      120px 20px 60px;
-  }
-
-  .hero-content {
-
-    margin-top: 20px;
+      0 20px;
   }
 
   .hero-content h1 {
 
     font-size: 4rem;
-
-    line-height: 1;
   }
 
   .hero-buttons {

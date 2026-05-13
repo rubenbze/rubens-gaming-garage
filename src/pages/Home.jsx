@@ -1,63 +1,56 @@
-import '../styles/Home.css'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import GameSlider from '../components/GameSlider'
-import TwitchEmbed from '../components/TwitchEmbed'
+import '../styles/Home.css'
 
 function Home() {
+
   return (
-    <div className="home">
 
-      <section className="hero">
+    <section className="hero">
 
-        <motion.div
-          className="hero-content"
+      <div className="hero-overlay"></div>
 
-          initial={{ opacity: 0, y: 60 }}
+      <motion.div
+        className="hero-content"
 
-          animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 40 }}
 
-          transition={{ duration: 1 }}
-        >
+        animate={{ opacity: 1, y: 0 }}
 
-          <h1>
-            Ruben's Gaming Garage
-          </h1>
+        transition={{ duration: 1 }}
+      >
 
-          <p>
-            Next-generation gaming setups,
-            esports energy,
-            anime culture,
-            and immersive technology.
-          </p>
+        <h1>
 
-          <Link to="/games">
+          ENTER THE GARAGE
 
-            <motion.button
+        </h1>
 
-              whileHover={{
-                scale: 1.08
-              }}
+        <p>
 
-              whileTap={{
-                scale: 0.95
-              }}
-            >
-              Enter The Garage
-            </motion.button>
+          Welcome to Ruben’s Gaming Garage —
+          your hub for AAA games,
+          premium gaming gear,
+          cinematic videos,
+          and next-generation gaming experiences.
 
-          </Link>
+        </p>
 
-        </motion.div>
+        <div className="hero-buttons">
 
-      </section>
+          <a href="/games">
+            Explore Games
+          </a>
 
-      <GameSlider />
+          <a href="/shop">
+            Gaming Gear
+          </a>
 
-      <TwitchEmbed />
+        </div>
 
-    </div>
+      </motion.div>
+
+    </section>
   )
 }
 
