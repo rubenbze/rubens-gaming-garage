@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import '../styles/Navbar.css'
 
 function Navbar() {
+
   return (
 
     <motion.nav
@@ -16,19 +17,25 @@ function Navbar() {
       transition={{ duration: 0.6 }}
     >
 
-      <h2>
-        🎮 Ruben's Gaming Garage
-      </h2>
+      <div className="logo">
 
-      <ul>
+        🎮 Ruben's Gaming Garage
+
+      </div>
+
+      <ul className="nav-links">
 
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            Home
+          </Link>
         </li>
 
         <li className="dropdown">
 
-          <span>Gaming ▾</span>
+          <span>
+            Gaming ▾
+          </span>
 
           <div className="dropdown-menu">
 
@@ -45,7 +52,9 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/shop">Gear</Link>
+          <Link to="/shop">
+            Gear
+          </Link>
         </li>
 
       </ul>
