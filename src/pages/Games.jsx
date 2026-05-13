@@ -1,42 +1,94 @@
-const games = [
+import '../styles/Games.css'
 
-  {
-    title: 'Call Of Duty',
+function Games() {
 
-    image:
-      'https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg',
+  const games = [
 
-    link:
-      'https://store.steampowered.com/app/1938090/Call_of_Duty/'
-  },
+    {
+      title: 'Call Of Duty',
 
-  {
-    title: 'Battlefield',
+      image:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg',
 
-    image:
-      'https://media.contentapi.ea.com/content/dam/battlefield/common/bf-2042/bf-2042-keyart.jpg.adapt.crop191x100.1200w.jpg',
+      link:
+        'https://store.steampowered.com/app/1938090/Call_of_Duty/'
+    },
 
-    link:
-      'https://www.ea.com/games/battlefield'
-  },
+    {
+      title: 'Battlefield',
 
-  {
-    title: 'EA Sports FC',
+      image:
+        'https://media.contentapi.ea.com/content/dam/battlefield/common/bf-2042/bf-2042-keyart.jpg.adapt.crop191x100.1200w.jpg',
 
-    image:
-      'https://media.contentapi.ea.com/content/dam/ea/fc/fc-25/common/fc25-keyart.png.adapt.crop16x9.1455w.png',
+      link:
+        'https://www.ea.com/games/battlefield'
+    },
 
-    link:
-      'https://www.ea.com/games/ea-sports-fc'
-  },
+    {
+      title: 'EA Sports FC',
 
-  {
-    title: 'Apex Legends',
+      image:
+        'https://media.contentapi.ea.com/content/dam/ea/fc/fc-25/common/fc25-keyart.png.adapt.crop16x9.1455w.png',
 
-    image:
-      'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
+      link:
+        'https://www.ea.com/games/ea-sports-fc'
+    },
 
-    link:
-      'https://store.steampowered.com/app/1172470/Apex_Legends/'
-  },
-]
+    {
+      title: 'Apex Legends',
+
+      image:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
+
+      link:
+        'https://store.steampowered.com/app/1172470/Apex_Legends/'
+    },
+
+  ]
+
+  return (
+
+    <section className="games-page">
+
+      <h1>
+        Featured Games
+      </h1>
+
+      <div className="games-grid">
+
+        {games.map((game, index) => (
+
+          <a
+            key={index}
+
+            href={game.link}
+
+            target="_blank"
+
+            rel="noreferrer"
+
+            className="game-card"
+          >
+
+            <img
+              src={game.image}
+
+              alt={game.title}
+            />
+
+            <h2>
+              {game.title}
+            </h2>
+
+          </a>
+
+        ))}
+
+      </div>
+
+    </section>
+
+  )
+}
+
+export default Games
