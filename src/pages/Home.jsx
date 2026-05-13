@@ -7,20 +7,28 @@ function Home() {
 
       <section className="hero">
 
-        <h1>
-          Ruben's Gaming Garage
-        </h1>
+        <div className="hero-content">
 
-        <p>
-          Premium gaming gear, featured games,
-          tech videos, and next-level setups.
-        </p>
+          <h1>
+            Ruben's Gaming Garage
+          </h1>
 
-        <Link to="/games">
-          <button>
-            Explore Now
-          </button>
-        </Link>
+          <p>
+            Premium gaming setups,
+            next-gen gear,
+            esports energy,
+            and immersive tech experiences.
+          </p>
+
+          <Link to="/games">
+
+            <button>
+              Explore The Garage
+            </button>
+
+          </Link>
+
+        </div>
 
       </section>
 

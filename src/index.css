@@ -4,19 +4,28 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  width: 100%;
-  min-height: 100%;
-
-  overflow-x: hidden;
-
-  font-family: Arial, sans-serif;
-
-  background: #050816;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  background: #020617;
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

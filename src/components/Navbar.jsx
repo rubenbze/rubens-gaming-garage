@@ -5,9 +5,10 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-<h2>🎮 Ruben's Gaming Garage</h2>
+      <h2>🎮 Ruben's Gaming Garage</h2>
 
       <ul>
+
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -17,12 +18,13 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop">Gear</Link>
         </li>
 
         <li>
           <Link to="/videos">Videos</Link>
         </li>
+
       </ul>
 
     </nav>
