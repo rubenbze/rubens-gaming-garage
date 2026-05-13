@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 import '../styles/Navbar.css'
@@ -13,17 +14,25 @@ function Navbar() {
 
     <motion.nav
       className="navbar"
+
       initial={{ y: -100 }}
+
       animate={{ y: 0 }}
+
       transition={{ duration: 0.6 }}
     >
 
       <div className="logo">
+
         🎮 Ruben's Gaming Garage
+
       </div>
+
+      {/* HAMBURGER BUTTON */}
 
       <div
         className="menu-toggle"
+
         onClick={() => setMenuOpen(!menuOpen)}
       >
 
@@ -31,21 +40,39 @@ function Navbar() {
 
       </div>
 
+      {/* NAV LINKS */}
+
       <div className={`nav-right ${menuOpen ? 'active' : ''}`}>
 
-        <Link to="/" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/"
+
+          onClick={() => setMenuOpen(false)}
+        >
           Home
         </Link>
 
-        <Link to="/games" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/games"
+
+          onClick={() => setMenuOpen(false)}
+        >
           Games
         </Link>
 
-        <Link to="/videos" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/videos"
+
+          onClick={() => setMenuOpen(false)}
+        >
           Videos
         </Link>
 
-        <Link to="/shop" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/shop"
+
+          onClick={() => setMenuOpen(false)}
+        >
           Gear
         </Link>
 
