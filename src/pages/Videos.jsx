@@ -4,9 +4,9 @@ function Videos() {
 
   const videos = [
     {
-      title: "One Piece Egghead Arc Trailer",
+      title: "Luffy Transforms to Gear 5 for Rob Lucci | One Piece",
   link:
-    "https://www.youtube.com/embed/V4KQW7r1qpg"
+    "https://www.youtube.com/embed/scPBmrzdD0g"
     },
 
     {
@@ -16,7 +16,7 @@ function Videos() {
     },
 
     {
-      title: "Top Gaming Accessories 2026",
+      title: "Hottest Game of 2026?",
   link:
     "https://www.youtube.com/embed/QdBZY2fkU-0"
     }
