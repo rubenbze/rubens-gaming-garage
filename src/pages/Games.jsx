@@ -18,7 +18,7 @@ function Games() {
       title: 'Battlefield',
 
       image:
-        'https://media.contentapi.ea.com/content/dam/battlefield/common/bf-2042/bf-2042-keyart.jpg.adapt.crop191x100.1200w.jpg',
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/header.jpg',
 
       link:
         'https://www.ea.com/games/battlefield'
@@ -28,7 +28,7 @@ function Games() {
       title: 'EA Sports FC',
 
       image:
-        'https://media.contentapi.ea.com/content/dam/ea/fc/fc-25/common/fc25-keyart.png.adapt.crop16x9.1455w.png',
+        'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg',
 
       link:
         'https://www.ea.com/games/ea-sports-fc'

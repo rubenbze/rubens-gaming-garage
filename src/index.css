@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
 * {
+
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
 html {
+
   scroll-behavior: smooth;
 }
 
@@ -15,39 +18,57 @@ body {
   font-family: 'Inter', sans-serif;
 
   background:
-
-    radial-gradient(
-      circle at top left,
-      rgba(59,130,246,0.18),
-      transparent 28%
-    ),
-
-    radial-gradient(
-      circle at bottom right,
-      rgba(168,85,247,0.18),
-      transparent 28%
-    ),
-
     linear-gradient(
       180deg,
       #020617,
       #0f172a,
-      #111827,
-      #1e293b
+      #111827
     );
 
   color: white;
 
   overflow-x: hidden;
-
-  min-height: 100vh;
 }
 
 #root {
-  position: relative;
-  z-index: 1;
+
+  width: 100%;
+}
+
+main,
+section {
+
+  width: 100%;
+}
+
+.container {
+
+  width: 100%;
+
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 0 24px;
+}
+
+img {
+
+  max-width: 100%;
+
+  display: block;
 }
 
 a {
+
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+
+    padding: 0 16px;
+  }
+
 }
