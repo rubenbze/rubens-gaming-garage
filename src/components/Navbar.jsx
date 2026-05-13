@@ -18,7 +18,7 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/shop">Gear</Link>
+          <Link to="/shop">BANANA TEST</Link>
         </li>
 
         <li>
