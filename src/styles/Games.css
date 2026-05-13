@@ -110,3 +110,22 @@
 .game-overlay button:hover {
   background: #1d4ed8;
 }
+@media (max-width: 768px) {
+
+  .games-page {
+    padding: 120px 20px;
+  }
+
+  .games-page h1 {
+    font-size: 38px;
+  }
+
+  .game-card {
+    height: 400px;
+  }
+
+  .game-overlay h2 {
+    font-size: 24px;
+  }
+
+}

@@ -115,3 +115,18 @@
 .product-info button:hover {
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+
+  .shop-page {
+    padding: 120px 20px;
+  }
+
+  .shop-page h1 {
+    font-size: 40px;
+  }
+
+  .product-info h2 {
+    font-size: 22px;
+  }
+
+}

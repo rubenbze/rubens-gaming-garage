@@ -49,3 +49,32 @@
 .navbar a:hover {
   color: #60a5fa;
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .navbar h2 {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    text-align: center;
+  }
+
+  .navbar ul {
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+}

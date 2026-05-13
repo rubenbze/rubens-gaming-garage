@@ -63,3 +63,22 @@
 
   font-size: 24px;
 }
+@media (max-width: 768px) {
+
+  .videos-page {
+    padding: 120px 20px;
+  }
+
+  .videos-page h1 {
+    font-size: 40px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card iframe {
+    height: 220px;
+  }
+
+}
