@@ -10,7 +10,7 @@ const games = [
       'https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    title: 'Valorant',
+    title: 'Valorante',
     image:
       'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop',
   },
