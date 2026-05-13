@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 import '../styles/Navbar.css'
 
 function Navbar() {
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
 
     <motion.nav
       className="navbar"
-
       initial={{ y: -100 }}
-
       animate={{ y: 0 }}
-
       transition={{ duration: 0.6 }}
     >
 
@@ -21,33 +22,30 @@ function Navbar() {
         🎮 Ruben's Gaming Garage
       </div>
 
-      <div className="nav-right">
+      <div
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
 
-        <Link to="/">
+        {menuOpen ? <FaTimes /> : <FaBars />}
+
+      </div>
+
+      <div className={`nav-right ${menuOpen ? 'active' : ''}`}>
+
+        <Link to="/" onClick={() => setMenuOpen(false)}>
           Home
         </Link>
 
-        <div className="dropdown">
+        <Link to="/games" onClick={() => setMenuOpen(false)}>
+          Games
+        </Link>
 
-          <span>
-            Gaming ▾
-          </span>
+        <Link to="/videos" onClick={() => setMenuOpen(false)}>
+          Videos
+        </Link>
 
-          <div className="dropdown-menu">
-
-            <Link to="/games">
-              Games
-            </Link>
-
-            <Link to="/videos">
-              Videos
-            </Link>
-
-          </div>
-
-        </div>
-
-        <Link to="/shop">
+        <Link to="/shop" onClick={() => setMenuOpen(false)}>
           Gear
         </Link>
 

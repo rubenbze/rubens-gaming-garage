@@ -1,29 +1,30 @@
-import '../styles/Games.css'
-
 const games = [
 
   {
     title: 'Call Of Duty',
+
     image:
-      'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop',
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg',
 
     link:
       'https://store.steampowered.com/app/1938090/Call_of_Duty/'
   },
 
   {
-    title: 'Battlefield 6',
+    title: 'Battlefield',
+
     image:
-      'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop',
+      'https://media.contentapi.ea.com/content/dam/battlefield/common/bf-2042/bf-2042-keyart.jpg.adapt.crop191x100.1200w.jpg',
 
     link:
       'https://www.ea.com/games/battlefield'
   },
 
   {
-    title: 'FC 26',
+    title: 'EA Sports FC',
+
     image:
-      'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2070&auto=format&fit=crop',
+      'https://media.contentapi.ea.com/content/dam/ea/fc/fc-25/common/fc25-keyart.png.adapt.crop16x9.1455w.png',
 
     link:
       'https://www.ea.com/games/ea-sports-fc'
@@ -31,69 +32,11 @@ const games = [
 
   {
     title: 'Apex Legends',
+
     image:
-      'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070&auto=format&fit=crop',
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
 
     link:
       'https://store.steampowered.com/app/1172470/Apex_Legends/'
   },
-
 ]
-
-function Games() {
-
-  return (
-
-    <section className="games-page">
-
-      <h1>
-        Featured Games
-      </h1>
-
-      <div className="games-grid">
-
-        {games.map((game) => (
-
-          <a
-            href={game.link}
-
-            target="_blank"
-
-            className="game-card"
-
-            key={game.title}
-          >
-
-            <div
-              className="game-image"
-
-              style={{
-                backgroundImage: `url(${game.image})`
-              }}
-            >
-
-              <div className="game-overlay">
-
-                <h2>
-                  {game.title}
-                </h2>
-
-                <p>
-                  View on Steam
-                </p>
-
-              </div>
-
-            </div>
-
-          </a>
-
-        ))}
-
-      </div>
-
-    </section>
-  )
-}
-
-export default Games
