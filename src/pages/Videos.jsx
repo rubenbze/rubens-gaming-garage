@@ -4,9 +4,9 @@ function Videos() {
 
   const videos = [
     {
-      title: "Ultimate Gaming Setup",
-      link:
-        "https://www.youtube.com/embed/XcfBvMWS3X8"
+      title: "Insane Gaming Setup Tour",
+  link:
+    "https://www.youtube.com/embed/3VZFpwlXKpg"
     },
 
     {
@@ -16,9 +16,9 @@ function Videos() {
     },
 
     {
-      title: "Best Gaming Accessories",
-      link:
-        "https://www.youtube.com/embed/qUqjz3_9w9I"
+      title: "Top Gaming Accessories 2026",
+  link:
+    "https://www.youtube.com/embed/QdBZY2fkU-0"
     }
   ]
 
