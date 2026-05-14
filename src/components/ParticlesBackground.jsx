@@ -8,19 +8,16 @@ function ParticlesBackground() {
 
       id="tsparticles"
 
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: -10,
-      }}
-
       options={{
 
-        fullScreen: false,
+        fullScreen: {
+          enable: true,
+          zIndex: -10,
+        },
 
         background: {
           color: {
-            value: '#020617',
+            value: 'transparent',
           },
         },
 
@@ -33,27 +30,37 @@ function ParticlesBackground() {
           },
 
           links: {
+
             color: '#60a5fa',
+
             distance: 150,
+
             enable: true,
+
             opacity: 0.2,
+
             width: 1,
           },
 
           move: {
+
             enable: true,
+
             speed: 1.3,
           },
 
           number: {
+
             value: 70,
           },
 
           opacity: {
+
             value: 0.3,
           },
 
           size: {
+
             value: 2,
           },
         },

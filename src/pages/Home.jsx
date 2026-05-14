@@ -8,8 +8,6 @@ function Home() {
 
     <section className="hero">
 
-      <div className="hero-overlay"></div>
-
       <motion.div
         className="hero-content"
 
