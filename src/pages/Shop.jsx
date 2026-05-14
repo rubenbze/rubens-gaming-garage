@@ -5,75 +5,111 @@ function Shop() {
   const products = [
 
     {
-      name: 'DualSense Controller',
+      name: 'DualSense Edge Controller',
 
-      price: '$69.99',
+      price: '$199.99',
 
       image:
-        'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=1974&auto=format&fit=crop',
+
+      description:
+        'Sony’s elite PlayStation controller with customizable back buttons and premium precision.',
+
+      specs:
+        'PS5 • Wireless • Pro Controller',
 
       link:
-        'https://www.amazon.com/'
+        'https://www.amazon.com/s?k=DualSense+Edge+Wireless+Controller'
     },
 
     {
-      name: 'Gaming Headset',
+  name: 'LG UltraGear OLED Monitor',
 
-      price: '$89.99',
+  price: '$899.99',
 
-      image:
-        'https://images.unsplash.com/photo-1612444530582-fc66183b16f7?q=80&w=2070&auto=format&fit=crop',
+  image:
+    'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2070&auto=format&fit=crop',
+
+      description:
+        'Ultra-smooth OLED gaming with incredible colors and lightning-fast response times.',
+
+      specs:
+        'OLED • 240Hz • 1440p',
 
       link:
-        'https://www.amazon.com/'
+        'https://www.amazon.com/s?k=LG+UltraGear+OLED+Gaming+Monitor'
     },
 
     {
-      name: 'Mechanical Keyboard',
+      name: 'Secretlab TITAN Evo',
 
-      price: '$119.99',
+      price: '$549.99',
 
       image:
-        'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=2070&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1974&auto=format&fit=crop',
+
+      description:
+        'Professional ergonomic gaming chair built for comfort during long gaming sessions.',
+
+      specs:
+        'Ergonomic • Premium Leather • Adjustable',
 
       link:
-        'https://www.amazon.com/'
+        'https://secretlab.co/'
     },
 
     {
-      name: 'Gaming Mouse',
+      name: 'SteelSeries Arctis Nova Pro',
 
-      price: '$59.99',
+      price: '$349.99',
+
+      image:
+        'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop',
+
+      description:
+        'Premium gaming audio with crystal-clear directional sound and immersive bass.',
+
+      specs:
+        'Wireless • Noise Cancelling • Spatial Audio',
+
+      link:
+        'https://www.amazon.com/s?k=SteelSeries+Arctis+Nova+Pro'
+    },
+
+    {
+      name: 'Logitech G Pro X Superlight',
+
+      price: '$159.99',
 
       image:
         'https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=2070&auto=format&fit=crop',
 
+      description:
+        'Ultra-lightweight esports gaming mouse trusted by competitive professionals.',
+
+      specs:
+        'Wireless • Ultra-Light • HERO Sensor',
+
       link:
-        'https://www.amazon.com/'
+        'https://www.amazon.com/s?k=Logitech+G+Pro+X+Superlight'
     },
 
     {
-      name: 'Gaming Monitor',
-
-      price: '$299.99',
-
-      image:
-        'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=2070&auto=format&fit=crop',
-
-      link:
-        'https://www.amazon.com/'
-    },
-
-    {
-      name: 'Gaming Chair',
+      name: 'Razer Huntsman V3 Pro',
 
       price: '$249.99',
 
       image:
-        'https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=2074&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=2070&auto=format&fit=crop',
+
+      description:
+        'Competitive RGB gaming keyboard with ultra-fast optical switches and stunning lighting.',
+
+      specs:
+        'RGB • Optical Switches • Esports',
 
       link:
-        'https://www.amazon.com/'
+        'https://www.amazon.com/s?k=Razer+Huntsman+V3+Pro'
     }
 
   ]
@@ -83,7 +119,7 @@ function Shop() {
     <section className="shop-page">
 
       <h1>
-        Gaming Gear
+        Elite Gaming Gear
       </h1>
 
       <div className="shop-grid">
@@ -92,7 +128,6 @@ function Shop() {
 
           <div
             className="product-card"
-
             key={index}
           >
 
@@ -115,14 +150,24 @@ function Shop() {
                 {product.price}
               </p>
 
+              <div className="product-hover">
+
+                <span>
+                  {product.specs}
+                </span>
+
+                <small>
+                  {product.description}
+                </small>
+
+              </div>
+
               <a
                 href={product.link}
-
                 target="_blank"
-
                 rel="noreferrer"
               >
-                Buy Now
+                View Product
               </a>
 
             </div>

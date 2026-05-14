@@ -1,15 +1,38 @@
 .videos-page {
 
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 120px 5vw 80px;
+
+  overflow: hidden;
+}
+
+/* CINEMATIC GLOW */
+
+.videos-page::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
   background:
-    linear-gradient(
-      180deg,
-      #020617,
-      #0f172a
+    radial-gradient(
+      circle,
+      rgba(59,130,246,0.18),
+      transparent 70%
     );
 
-  color: white;
+  top: -300px;
+  right: -200px;
 
-  padding: 90px 40px 50px;
+  filter: blur(90px);
+
+  z-index: -1;
 }
 
 .videos-page h1 {
@@ -18,11 +41,15 @@
 
   font-size: clamp(3rem, 6vw, 5rem);
 
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+
+  font-family: 'Orbitron', sans-serif;
 
   text-shadow:
-    0 0 25px rgba(59,130,246,0.5);
+    0 0 35px rgba(59,130,246,0.45);
 }
+
+/* NETFLIX STYLE GRID */
 
 .videos-grid {
 
@@ -31,34 +58,43 @@
   grid-template-columns:
     repeat(auto-fit, minmax(360px, 1fr));
 
-  gap: 32px;
+  gap: 36px;
 }
+
+/* VIDEO CARD */
 
 .video-card {
 
-  background:
-    rgba(17,24,39,0.85);
-
-  border-radius: 22px;
+  position: relative;
 
   overflow: hidden;
 
-  transition: 0.35s;
+  border-radius: 24px;
+
+  background:
+    rgba(15,23,42,0.75);
+
+  backdrop-filter: blur(14px);
 
   border:
-    1px solid rgba(255,255,255,0.06);
+    1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter: blur(10px);
+  transition: 0.45s;
+
+  cursor: pointer;
 }
 
 .video-card:hover {
 
   transform:
-    translateY(-8px);
+    translateY(-10px)
+    scale(1.02);
 
   box-shadow:
-    0 0 35px rgba(59,130,246,0.35);
+    0 0 45px rgba(59,130,246,0.35);
 }
+
+/* VIDEO */
 
 .video-card iframe {
 
@@ -69,23 +105,63 @@
   border: none;
 }
 
-.video-card h2 {
+/* INFO */
 
-  padding: 22px;
+.video-info {
 
-  font-size: 22px;
+  padding: 24px;
 }
+
+.video-info h2 {
+
+  font-size: 1.4rem;
+
+  margin-bottom: 12px;
+}
+
+.video-info p {
+
+  color: #cbd5e1;
+
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+/* TAGS */
+
+.video-tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.video-tags span {
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(59,130,246,0.16);
+
+  color: #93c5fd;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+/* MOBILE */
 
 @media (max-width: 768px) {
 
   .videos-page {
 
-    padding: 95px 40px 50px;
-  }
-
-  .videos-page h1 {
-
-    font-size: 42px;
+    padding: 100px 20px 50px;
   }
 
   .videos-grid {

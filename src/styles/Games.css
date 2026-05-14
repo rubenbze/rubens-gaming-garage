@@ -27,7 +27,7 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(380px, 1fr));
+    repeat(auto-fit, minmax(360px, 1fr));
 
   gap: 40px;
 }
@@ -42,24 +42,21 @@
 
   overflow: hidden;
 
+  background: #111827;
+
   cursor: pointer;
 
   transition: 0.45s;
-
-  background: #111827;
-
-  border:
-    1px solid rgba(255,255,255,0.08);
 }
 
 .game-card:hover {
 
   transform:
-    translateY(-10px)
+    translateY(-12px)
     scale(1.02);
 
   box-shadow:
-    0 0 60px rgba(59,130,246,0.35);
+    0 0 70px rgba(59,130,246,0.4);
 }
 
 .game-card img {
@@ -75,7 +72,7 @@
 
 .game-card:hover img {
 
-  transform: scale(1.08);
+  transform: scale(1.12);
 }
 
 .game-overlay {
@@ -88,57 +85,97 @@
 
   flex-direction: column;
 
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  padding: 34px;
+  padding: 30px;
 
   background:
     linear-gradient(
-      180deg,
-      rgba(2,6,23,0.15),
-      rgba(2,6,23,0.92)
+      transparent 30%,
+      rgba(2,6,23,0.96)
     );
-}
 
-.game-year {
-
-  display: inline-block;
-
-  padding: 8px 16px;
-
-  border-radius: 999px;
-
-  background:
-    rgba(59,130,246,0.22);
-
-  backdrop-filter: blur(10px);
-
-  margin-bottom: 20px;
-
-  font-size: 14px;
+  transition: 0.4s;
 }
 
 .game-overlay h2 {
 
-  font-size: 2.4rem;
+  font-size: 2rem;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
-  font-weight: 900;
+  transition: 0.4s;
 }
 
-.game-overlay p {
+.game-year {
 
-  color: #d1d5db;
+  color: #60a5fa;
 
-  font-size: 1.1rem;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+/* HIDDEN CONTENT */
+
+.hidden-info {
+
+  opacity: 0;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    max-height 0.4s ease;
+}
+
+.game-card:hover .hidden-info {
+
+  opacity: 1;
+
+  max-height: 300px;
+}
+
+.genre {
+
+  color: #cbd5e1;
+
+  margin-bottom: 12px;
+}
+
+.description {
+
+  color: #94a3b8;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+.game-meta {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  color: #e2e8f0;
 }
 
 .game-overlay a {
 
+  display: inline-block;
+
   width: fit-content;
 
-  padding: 14px 28px;
+  padding: 14px 24px;
 
   border-radius: 14px;
 
@@ -154,9 +191,6 @@
   font-weight: 700;
 
   transition: 0.3s;
-
-  box-shadow:
-    0 0 30px rgba(124,58,237,0.35);
 }
 
 .game-overlay a:hover {
@@ -164,7 +198,7 @@
   transform: scale(1.05);
 
   box-shadow:
-    0 0 50px rgba(124,58,237,0.7);
+    0 0 40px rgba(124,58,237,0.75);
 }
 
 @media (max-width: 768px) {
@@ -182,12 +216,7 @@
 
   .game-card {
 
-    height: 420px;
-  }
-
-  .game-overlay h2 {
-
-    font-size: 2rem;
+    height: 460px;
   }
 
 }

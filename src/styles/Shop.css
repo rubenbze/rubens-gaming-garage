@@ -2,24 +2,19 @@
 
   min-height: 100vh;
 
-  padding:
-    140px 6vw 80px;
-
-  color: white;
+  padding: 120px 5vw 80px;
 }
 
 .shop-page h1 {
 
   text-align: center;
 
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6vw, 5rem);
 
   margin-bottom: 70px;
 
-  font-family: 'Orbitron', sans-serif;
-
   text-shadow:
-    0 0 35px rgba(168,85,247,0.7);
+    0 0 30px rgba(168,85,247,0.35);
 }
 
 .shop-grid {
@@ -27,24 +22,26 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(340px, 1fr));
+    repeat(auto-fit, minmax(320px, 1fr));
 
-  gap: 40px;
+  gap: 36px;
 }
 
 .product-card {
 
-  background:
-    rgba(17,24,39,0.78);
-
-  border-radius: 28px;
+  position: relative;
 
   overflow: hidden;
 
-  border:
-    1px solid rgba(255,255,255,0.06);
+  border-radius: 26px;
 
-  backdrop-filter: blur(16px);
+  background:
+    rgba(15,23,42,0.75);
+
+  backdrop-filter: blur(14px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
 
   transition: 0.4s;
 }
@@ -55,12 +52,12 @@
     translateY(-10px);
 
   box-shadow:
-    0 0 50px rgba(59,130,246,0.3);
+    0 0 45px rgba(59,130,246,0.28);
 }
 
 .product-image {
 
-  height: 320px;
+  height: 260px;
 
   overflow: hidden;
 }
@@ -68,7 +65,6 @@
 .product-image img {
 
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
@@ -83,40 +79,84 @@
 
 .product-info {
 
-  padding: 32px;
+  padding: 28px;
 }
 
 .product-info h2 {
 
   font-size: 1.5rem;
 
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .product-info p {
 
   color: #60a5fa;
 
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   font-weight: 700;
+}
+
+.product-hover {
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition: 0.35s;
+
+  max-height: 0;
+
+  overflow: hidden;
+}
+
+.product-card:hover .product-hover {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+  max-height: 200px;
+}
+
+.product-hover span {
+
+  display: block;
+
+  color: #a855f7;
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+}
+
+.product-hover small {
+
+  color: #cbd5e1;
+
+  line-height: 1.6;
+
+  font-size: 0.95rem;
 }
 
 .product-info a {
 
   display: inline-block;
 
-  padding: 14px 26px;
+  margin-top: 24px;
 
-  border-radius: 14px;
+  padding: 14px 24px;
+
+  border-radius: 12px;
 
   background:
     linear-gradient(
       135deg,
-      #7c3aed,
-      #2563eb
+      #2563eb,
+      #7c3aed
     );
 
   color: white;
@@ -124,9 +164,6 @@
   font-weight: 700;
 
   transition: 0.3s;
-
-  box-shadow:
-    0 0 30px rgba(124,58,237,0.35);
 }
 
 .product-info a:hover {
@@ -134,15 +171,14 @@
   transform: scale(1.05);
 
   box-shadow:
-    0 0 50px rgba(124,58,237,0.75);
+    0 0 25px rgba(124,58,237,0.45);
 }
 
 @media (max-width: 768px) {
 
   .shop-page {
 
-    padding:
-      120px 20px 60px;
+    padding: 100px 20px 50px;
   }
 
   .shop-grid {
