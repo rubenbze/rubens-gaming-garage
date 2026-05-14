@@ -15,29 +15,35 @@
   padding: 18px 6vw;
 
   background:
-    rgba(2,6,23,0.75);
+    rgba(2,6,23,0.72);
 
   backdrop-filter: blur(18px);
 
   border-bottom:
     1px solid rgba(255,255,255,0.08);
 
-  z-index: 9999;
+  z-index: 99999;
 }
+
+/* LOGO */
 
 .logo {
 
-  font-size: 1.6rem;
+  font-size: 2rem;
 
   font-weight: 900;
 
-  color: white;
-
   font-family: 'Orbitron', sans-serif;
 
+  color: white;
+
+  letter-spacing: -1px;
+
   text-shadow:
-    0 0 20px rgba(168,85,247,0.6);
+    0 0 20px rgba(168,85,247,0.55);
 }
+
+/* NAV LINKS */
 
 .nav-right {
 
@@ -45,16 +51,41 @@
 
   align-items: center;
 
-  gap: 32px;
+  gap: 34px;
 }
 
 .nav-right a {
 
+  position: relative;
+
   color: white;
 
-  font-size: 1rem;
+  font-size: 1.05rem;
 
   font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.nav-right a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      #a855f7
+    );
 
   transition: 0.3s;
 }
@@ -62,9 +93,11 @@
 .nav-right a:hover {
 
   color: #60a5fa;
+}
 
-  text-shadow:
-    0 0 15px rgba(96,165,250,0.8);
+.nav-right a:hover::after {
+
+  width: 100%;
 }
 
 /* HAMBURGER */
@@ -79,7 +112,16 @@
 
   cursor: pointer;
 
-  z-index: 10001;
+  transition: 0.3s;
+
+  z-index: 100000;
+}
+
+.menu-toggle:hover {
+
+  transform: scale(1.1);
+
+  color: #60a5fa;
 }
 
 /* MOBILE */
@@ -95,33 +137,47 @@
 
     position: fixed;
 
-    top: 78px;
+    top: 82px;
     right: -100%;
 
-    width: 260px;
+    width: 270px;
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 26px;
+    align-items: flex-start;
+
+    gap: 28px;
 
     background:
       rgba(15,23,42,0.97);
 
-    padding: 30px;
+    backdrop-filter: blur(18px);
 
-    border-radius: 20px;
+    padding: 34px;
+
+    border-radius: 22px;
 
     transition: 0.35s;
 
     box-shadow:
-      0 0 35px rgba(59,130,246,0.25);
+      0 0 40px rgba(59,130,246,0.22);
   }
 
   .nav-right.active {
 
     right: 20px;
+  }
+
+  .nav-right a {
+
+    font-size: 1.15rem;
+  }
+
+  .logo {
+
+    font-size: 1.3rem;
   }
 
 }

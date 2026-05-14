@@ -28,8 +28,6 @@ function Navbar() {
 
       </div>
 
-      {/* HAMBURGER BUTTON */}
-
       <div
         className="menu-toggle"
 
@@ -39,8 +37,6 @@ function Navbar() {
         {menuOpen ? <FaTimes /> : <FaBars />}
 
       </div>
-
-      {/* NAV LINKS */}
 
       <div className={`nav-right ${menuOpen ? 'active' : ''}`}>
 
