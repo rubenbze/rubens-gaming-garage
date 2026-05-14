@@ -3,50 +3,98 @@ import '../styles/Shop.css'
 function Shop() {
 
   const products = [
+
     {
-      name: "HyperX Gaming Keyboard",
-      price: "$129",
+      name: 'DualSense Controller',
+
+      price: '$69.99',
 
       image:
-        "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=2070&auto=format&fit=crop",
+        'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070&auto=format&fit=crop',
 
       link:
-        "https://www.amazon.com/s?k=hyperx+gaming+keyboard"
+        'https://www.amazon.com/'
     },
 
     {
-      name: "Logitech Gaming Mouse",
-      price: "$79",
+      name: 'Gaming Headset',
+
+      price: '$89.99',
 
       image:
-        "https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=2070&auto=format&fit=crop",
+        'https://images.unsplash.com/photo-1612444530582-fc66183b16f7?q=80&w=2070&auto=format&fit=crop',
 
       link:
-        "https://www.amazon.com/s?k=logitech+gaming+mouse"
+        'https://www.amazon.com/'
     },
 
     {
-      name: "SteelSeries Headset",
-      price: "$149",
+      name: 'Mechanical Keyboard',
+
+      price: '$119.99',
 
       image:
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2070&auto=format&fit=crop",
+        'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=2070&auto=format&fit=crop',
 
       link:
-        "https://www.amazon.com/s?k=steelseries+gaming+headset"
+        'https://www.amazon.com/'
+    },
+
+    {
+      name: 'Gaming Mouse',
+
+      price: '$59.99',
+
+      image:
+        'https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=2070&auto=format&fit=crop',
+
+      link:
+        'https://www.amazon.com/'
+    },
+
+    {
+      name: 'Gaming Monitor',
+
+      price: '$299.99',
+
+      image:
+        'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=2070&auto=format&fit=crop',
+
+      link:
+        'https://www.amazon.com/'
+    },
+
+    {
+      name: 'Gaming Chair',
+
+      price: '$249.99',
+
+      image:
+        'https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=2074&auto=format&fit=crop',
+
+      link:
+        'https://www.amazon.com/'
     }
+
   ]
 
   return (
-    <div className="shop-page">
 
-      <h1>🛒 Gaming Gear</h1>
+    <section className="shop-page">
+
+      <h1>
+        Gaming Gear
+      </h1>
 
       <div className="shop-grid">
 
         {products.map((product, index) => (
 
-          <div className="product-card" key={index}>
+          <div
+            className="product-card"
+
+            key={index}
+          >
 
             <div className="product-image">
 
@@ -59,18 +107,22 @@ function Shop() {
 
             <div className="product-info">
 
-              <h2>{product.name}</h2>
+              <h2>
+                {product.name}
+              </h2>
 
-              <p>{product.price}</p>
+              <p>
+                {product.price}
+              </p>
 
               <a
                 href={product.link}
+
                 target="_blank"
+
                 rel="noreferrer"
               >
-                <button>
-                  View on Amazon
-                </button>
+                Buy Now
               </a>
 
             </div>
@@ -81,7 +133,7 @@ function Shop() {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 
