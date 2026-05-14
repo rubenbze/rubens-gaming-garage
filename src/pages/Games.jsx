@@ -5,44 +5,40 @@ function Games() {
   const games = [
 
     {
-      title: 'Call Of Duty',
-
+      title: 'Call of Duty',
       image:
-        'https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg',
-
-      link:
-        'https://store.steampowered.com/app/1938090/Call_of_Duty/'
+        'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop',
+      genre: 'FPS / Action',
+      year: '2025',
+      link: 'https://store.steampowered.com/app/1938090/Call_of_Duty/'
     },
 
     {
-      title: 'Battlefield',
-
+      title: 'Battlefield 6',
       image:
-        'https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/header.jpg',
-
-      link:
-        'https://www.ea.com/games/battlefield'
+        'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop',
+      genre: 'War / Tactical Shooter',
+      year: '2025',
+      link: 'https://www.ea.com/games/battlefield'
     },
 
     {
-      title: 'EA Sports FC',
-
+      title: 'EA Sports FC 26',
       image:
-        'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg',
-
-      link:
-        'https://www.ea.com/games/ea-sports-fc'
+        'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2070&auto=format&fit=crop',
+      genre: 'Sports / Football',
+      year: '2025',
+      link: 'https://www.ea.com/games/ea-sports-fc'
     },
 
     {
       title: 'Apex Legends',
-
       image:
-        'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
-
-      link:
-        'https://store.steampowered.com/app/1172470/Apex_Legends/'
-    },
+        'https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=2070&auto=format&fit=crop',
+      genre: 'Battle Royale',
+      year: '2025',
+      link: 'https://store.steampowered.com/app/1172470/Apex_Legends/'
+    }
 
   ]
 
@@ -58,16 +54,10 @@ function Games() {
 
         {games.map((game, index) => (
 
-          <a
-            key={index}
-
-            href={game.link}
-
-            target="_blank"
-
-            rel="noreferrer"
-
+          <div
             className="game-card"
+
+            key={index}
           >
 
             <img
@@ -76,18 +66,43 @@ function Games() {
               alt={game.title}
             />
 
-            <h2>
-              {game.title}
-            </h2>
+            <div className="game-overlay">
 
-          </a>
+              <div>
+
+                <span className="game-year">
+                  {game.year}
+                </span>
+
+                <h2>
+                  {game.title}
+                </h2>
+
+                <p>
+                  {game.genre}
+                </p>
+
+              </div>
+
+              <a
+                href={game.link}
+
+                target="_blank"
+
+                rel="noreferrer"
+              >
+                View Game
+              </a>
+
+            </div>
+
+          </div>
 
         ))}
 
       </div>
 
     </section>
-
   )
 }
 

@@ -28,6 +28,8 @@ function Navbar() {
 
       </div>
 
+      {/* MOBILE BUTTON */}
+
       <div
         className="menu-toggle"
 
@@ -38,39 +40,37 @@ function Navbar() {
 
       </div>
 
+      {/* DESKTOP NAV */}
+
       <div className={`nav-right ${menuOpen ? 'active' : ''}`}>
 
-        <Link
-          to="/"
-
-          onClick={() => setMenuOpen(false)}
-        >
+        <Link to="/">
           Home
         </Link>
 
-        <Link
-          to="/games"
+        <div className="dropdown">
 
-          onClick={() => setMenuOpen(false)}
-        >
-          Games
-        </Link>
+          <span>
+            Gaming ▾
+          </span>
 
-        <Link
-          to="/videos"
+          <div className="dropdown-menu">
 
-          onClick={() => setMenuOpen(false)}
-        >
-          Videos
-        </Link>
+            <Link to="/games">
+              Games
+            </Link>
 
-        <Link
-          to="/shop"
+            <Link to="/videos">
+              Videos
+            </Link>
 
-          onClick={() => setMenuOpen(false)}
-        >
-          Gear
-        </Link>
+            <Link to="/shop">
+              Gear
+            </Link>
+
+          </div>
+
+        </div>
 
       </div>
 

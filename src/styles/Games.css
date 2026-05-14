@@ -3,19 +3,23 @@
   min-height: 100vh;
 
   padding:
-  95px 5vw 60px;
+    140px 6vw 80px;
+
+  color: white;
 }
 
 .games-page h1 {
 
-  font-size: clamp(3rem, 6vw, 5rem);
-
   text-align: center;
+
+  font-size: clamp(3rem, 7vw, 6rem);
 
   margin-bottom: 70px;
 
+  font-family: 'Orbitron', sans-serif;
+
   text-shadow:
-    0 0 30px rgba(59,130,246,0.5);
+    0 0 35px rgba(168,85,247,0.7);
 }
 
 .games-grid {
@@ -23,7 +27,7 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(360px, 1fr));
+    repeat(auto-fit, minmax(380px, 1fr));
 
   gap: 40px;
 }
@@ -32,25 +36,30 @@
 
   position: relative;
 
-  height: 420px;
+  height: 520px;
 
   border-radius: 28px;
 
   overflow: hidden;
 
-  transition: 0.4s;
+  cursor: pointer;
+
+  transition: 0.45s;
 
   background: #111827;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
 }
 
 .game-card:hover {
 
   transform:
-    translateY(-12px)
+    translateY(-10px)
     scale(1.02);
 
   box-shadow:
-    0 0 50px rgba(59,130,246,0.35);
+    0 0 60px rgba(59,130,246,0.35);
 }
 
 .game-card img {
@@ -61,7 +70,7 @@
 
   object-fit: cover;
 
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 .game-card:hover img {
@@ -69,36 +78,102 @@
   transform: scale(1.08);
 }
 
-.game-card::after {
-
-  content: "";
+.game-overlay {
 
   position: absolute;
 
   inset: 0;
 
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 34px;
+
   background:
     linear-gradient(
-      transparent,
+      180deg,
+      rgba(2,6,23,0.15),
       rgba(2,6,23,0.92)
     );
 }
 
-.game-card h2 {
+.game-year {
 
-  position: absolute;
+  display: inline-block;
 
-  left: 24px;
-  bottom: 24px;
+  padding: 8px 16px;
 
-  z-index: 5;
+  border-radius: 999px;
 
-  font-size: 34px;
+  background:
+    rgba(59,130,246,0.22);
 
-  font-weight: 800;
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+}
+
+.game-overlay h2 {
+
+  font-size: 2.4rem;
+
+  margin-bottom: 12px;
+
+  font-weight: 900;
+}
+
+.game-overlay p {
+
+  color: #d1d5db;
+
+  font-size: 1.1rem;
+}
+
+.game-overlay a {
+
+  width: fit-content;
+
+  padding: 14px 28px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #2563eb
+    );
+
+  color: white;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 0 30px rgba(124,58,237,0.35);
+}
+
+.game-overlay a:hover {
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 50px rgba(124,58,237,0.7);
 }
 
 @media (max-width: 768px) {
+
+  .games-page {
+
+    padding:
+      120px 20px 60px;
+  }
 
   .games-grid {
 
@@ -107,7 +182,12 @@
 
   .game-card {
 
-    height: 340px;
+    height: 420px;
+  }
+
+  .game-overlay h2 {
+
+    font-size: 2rem;
   }
 
 }
